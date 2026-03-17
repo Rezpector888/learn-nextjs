@@ -23,8 +23,7 @@
       "@belajar/app": ["app/index.ts"],
       "@belajar/components": ["components/index.ts"],
       "@belajar/services": ["services/index.ts"]
-    },
-    "ignoreDeprecations": "6.0"
+    }
   },
   "include": [
     "next-env.d.ts",
