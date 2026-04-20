@@ -1,3 +1,5 @@
 export { default as Header } from "./Header";
 export { default as Footer } from "./Footer";
-export * from './posts';
+export { default as StartFieldCanvas } from "./StartFieldCanvas";
+export { default as TypeWriterText } from "./TypeWriterText";
+export * from "./posts";
