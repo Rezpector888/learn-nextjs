@@ -40,6 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="google-site-verification" content="SBB8fL_QJUqZDY_-ndr6PjM8wJF-17Q72SFwU9WUU-c" />
       <body className={`antialiased`}>
         <StarfieldCanvas />
         {/* <Header /> */}
