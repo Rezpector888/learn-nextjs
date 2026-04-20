@@ -2,6 +2,7 @@
   "name": "belajar",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://profile-dimas.vercel.app/",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
