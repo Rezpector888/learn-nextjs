@@ -1,4 +1,4 @@
-import { TypeWriterText } from '@belajar/components'
+<!-- import { TypeWriterText } from '@belajar/components'
 export default function Home() {
   return (
     <main className="min-h-screen text-yellow-300 px-8 py-16 relative">
@@ -80,4 +80,4 @@ export default function Home() {
       </div>
     </main>
   );
-}
+} -->
