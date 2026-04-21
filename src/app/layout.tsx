@@ -16,10 +16,26 @@ import StarfieldCanvas from "components/StartFieldCanvas";
 // });
 
 export const metadata: Metadata = {
-  title: "Dimas Portfolio",
-  description: "Backend Developer Portfolio - NestJS, Golang, PostgreSQL",
+  metadataBase: new URL("https://profile-dimas.vercel.app"),
+
+  title: "Dimas Iqbal Nugraha Portfolio",
+  description:
+    "Backend Developer Portfolio Dimas Iqbal Nugraha - NestJS, Golang, PostgreSQL",
+
+  keywords: [
+    "Dimas Iqbal Nugraha",
+    "Backend Developer",
+    "NestJS Developer",
+    "Golang Developer",
+    "PostgreSQL",
+    "Portfolio Backend Developer",
+  ],
+
+  authors: [{ name: "Dimas Iqbal Nugraha" }],
+  creator: "Dimas Iqbal Nugraha",
+
   openGraph: {
-    title: "Dimas Portfolio",
+    title: "Dimas Iqbal Nugraha Portfolio",
     description: "Backend Developer",
     url: "https://profile-dimas.vercel.app",
     siteName: "Dimas Portfolio",
@@ -30,8 +46,24 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
+    locale: "id_ID",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Dimas Iqbal Nugraha Portfolio",
+    description: "Backend Developer",
+    images: ["/vercel.svg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
+
+
 
 export default function RootLayout({
   children,
