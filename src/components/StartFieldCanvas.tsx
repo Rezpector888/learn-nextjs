@@ -18,9 +18,9 @@ export default function StarfieldCanvas() {
     let y = h / 2;
     let z = (w + h) / 2;
 
-    let n = 512;
+    let n = 1024;
     let star: number[][] = [];
-    let star_ratio = 256;
+    let star_ratio = n / 2;
     let star_speed = 2;
     let star_color_ratio = 1 / z;
 

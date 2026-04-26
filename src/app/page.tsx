@@ -1,35 +1,75 @@
-import { TypeWriterText } from '@belajar/components'
+import { CardExperience, TypeWriterText } from "@belajar/components";
 
 const skills = [
-  { num: '01', name: 'NestJS', sub: 'Node.js framework' },
-  { num: '02', name: 'Golang', sub: 'High-performance services' },
-  { num: '03', name: 'PostgreSQL', sub: 'Relational databases' },
-  { num: '04', name: 'Docker / K8s', sub: 'Container orchestration' },
-  { num: '05', name: 'Cloud & APIs', sub: 'Design & deployment' },
-]
+  { num: "01", name: "NestJS", sub: "Node.js framework" },
+  { num: "02", name: "Golang", sub: "High-performance services" },
+  { num: "03", name: "PostgreSQL", sub: "Relational databases" },
+  { num: "04", name: "Docker / K8s", sub: "Container orchestration" },
+  { num: "05", name: "Cloud & APIs", sub: "Design & deployment" },
+  { num: "06", name: "DevOps", sub: "CI/CD & Infrastructure" },
+  { num: "07", name: "DevOps", sub: "CI/CD & Infrastructure" },
+  { num: "08", name: "DevOps", sub: "CI/CD & Infrastructure" },
+  { num: "09", name: "DevOps", sub: "CI/CD & Infrastructure" },
+  { num: "10", name: "DevOps", sub: "CI/CD & Infrastructure" },
+
+];
 
 const projects = [
   {
-    num: '01',
-    title: 'Real-time Backend System',
-    desc: 'High-performance backend with real-time event processing and sub-millisecond response times under heavy load.',
-    tags: ['NestJS', 'Redis', 'WebSocket'],
+    num: "01",
+    title: "Real-time Backend System",
+    desc: "High-performance backend with real-time event processing and sub-millisecond response times under heavy load.",
+    tags: ["NestJS", "Redis", "WebSocket"],
   },
   {
-    num: '02',
-    title: 'Microservices Platform',
-    desc: 'Distributed microservices architecture on Kubernetes with automated CI/CD pipelines and zero-downtime deploys.',
-    tags: ['Golang', 'Kubernetes', 'gRPC'],
+    num: "02",
+    title: "Microservices Platform",
+    desc: "Distributed microservices architecture on Kubernetes with automated CI/CD pipelines and zero-downtime deploys.",
+    tags: ["Golang", "Kubernetes", "gRPC"],
   },
-    {
-    num: '03',
-    title: 'Microservices Platform',
-    desc: 'Distributed microservices architecture on Kubernetes with automated CI/CD pipelines and zero-downtime deploys.',
-    tags: ['Golang', 'Kubernetes', 'gRPC'],
+  {
+    num: "03",
+    title: "Microservices Platform",
+    desc: "Distributed microservices architecture on Kubernetes with automated CI/CD pipelines and zero-downtime deploys.",
+    tags: ["Golang", "Kubernetes", "gRPC"],
   },
-]
+];
+
+const experiences = [
+  {
+    title: "Backend Developer",
+    company: "PT Altimeda Cipta Visitama",
+    date: "Feb 2025 - Now",
+    description: "Working with NestJS, Golang, PostgreSQL, Mssql, Redis.",
+  },
+  {
+    title: "Backend Developer - Freelance",
+    company: "PT Ismart Inter  Global",
+    date: "2024 - 2024",
+    description: "Create RESTful APIs ",
+  },
+  {
+    title: "Backend Developer - Freelance",
+    company: "CV Moonlight Technology",
+    date: "2025 - 2025",
+    description: "Create RESTful APIs ",
+  },
+  {
+    title: "Backend Developer & DevOps Engineer",
+    company: "PT Supernova Palapa Nusantara",
+    date: "2022 - Apr 2025",
+    description: "Working with NestJS, Golang, PostgreSQL, Mssql, Redis.",
+  },
+  {
+    title: "Programmer",
+    company: "PT Indismart",
+    date: "Feb 2025 - Now",
+    description: "Working with NestJS, Golang, PostgreSQL, Mssql, Redis.",
+  },
+];
 
 const currentDate = new Date();
+
 
 export default function Home() {
   return (
@@ -38,14 +78,13 @@ export default function Home() {
       {/* <StarfieldCanvas /> */}
 
       <div className="relative z-10 max-w-4xl mx-auto px-8 py-16">
-
         {/* NAV */}
         <nav className="flex justify-between items-center mb-20">
           <span className="font-mono text-[11px] tracking-[3px] text-[#7EB8F7]">
             DIMAS.DEV
           </span>
           <ul className="flex gap-7 list-none">
-            {['About', 'Work', 'Contact'].map((item) => (
+            {["About", "Work", "Contact", "Experience"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -76,12 +115,13 @@ export default function Home() {
           </h1>
 
           <p className="font-mono text-[11px] tracking-[3px] text-[#3d5a72] uppercase mb-6">
-            NestJS &nbsp;·&nbsp; Golang &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Cloud
+            NestJS &nbsp;·&nbsp; Golang &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp;
+            Cloud
           </p>
 
           <p className="text-[15px] text-[#6a8faa] max-w-md leading-relaxed mb-8">
-            I architect scalable backend systems and microservices, turning complex
-            problems into clean, performant solutions.
+            I architect scalable backend systems and microservices, turning
+            complex problems into clean, performant solutions.
           </p>
 
           <div className="flex gap-3 flex-wrap">
@@ -118,11 +158,59 @@ export default function Home() {
                 className="group bg-[#070f17] hover:bg-[#0d1e2e] p-5 transition-colors relative overflow-hidden"
               >
                 <span className="absolute top-0 left-0 w-full h-0.5 bg-[#7EB8F7] opacity-0 group-hover:opacity-100 transition-opacity" />
-                <p className="font-mono text-[10px] text-[#7EB8F7] tracking-[1px] mb-2">{s.num}</p>
-                <p className="text-[13px] font-medium text-[#C8DEF0]">{s.name}</p>
+                <p className="font-mono text-[10px] text-[#7EB8F7] tracking-[1px] mb-2">
+                  {s.num}
+                </p>
+                <p className="text-[13px] font-medium text-[#C8DEF0]">
+                  {s.name}
+                </p>
                 <p className="text-[11px] text-[#2d4a5e] mt-1">{s.sub}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* EXPERIENCE */}
+        <section className="mb-20 relative" id="experience">
+          {/* Title */}
+          <div className="flex items-center gap-3 mb-12">
+            <span className="font-mono text-[10px] tracking-[4px] text-[#7EB8F7] uppercase">
+              Experiences
+            </span>
+            <span className="flex-1 h-px bg-linear-to-r from-[#1d3550] to-transparent" />
+          </div>
+
+          {/* Center Line */}
+          <div className="relative">
+            <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-linear-to-b from-blue-500/40 via-blue-400/20 to-transparent" />
+
+            {experiences.map((item, index) => {
+              const isLeft = index % 2 === 0;
+
+              return (
+                <div
+                  key={index}
+                  className="relative flex items-center justify-between w-full mb-16"
+                >
+                  {/* LEFT SIDE */}
+                  <div
+                    className={`w-1/2 ${isLeft ? "pr-10 text-right" : "opacity-0"}`}
+                  >
+                    {isLeft && <CardExperience item={item} align="right" />}
+                  </div>
+
+                  {/* DOT */}
+                  <div className="absolute left-1/2 -translate-x-1/2 z-10">
+                    <div className="w-5 h-5 rounded-full bg-blue-400 shadow-[0_0_15px_#60a5fa]" />
+                  </div>
+
+                  {/* RIGHT SIDE */}
+                  <div className={`w-1/2 ${!isLeft ? "pl-10" : "opacity-0"}`}>
+                    {!isLeft && <CardExperience item={item} align="left" />}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
@@ -148,7 +236,9 @@ export default function Home() {
                 <h3 className="font-mono text-[14px] font-bold text-[#EDF4FF] mb-3">
                   {p.title}
                 </h3>
-                <p className="text-[13px] text-[#4a6a82] leading-relaxed mb-5">{p.desc}</p>
+                <p className="text-[13px] text-[#4a6a82] leading-relaxed mb-5">
+                  {p.desc}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {p.tags.map((tag) => (
                     <span
@@ -175,16 +265,27 @@ export default function Home() {
 
           <div className="grid grid-cols-2 gap-px bg-[#0d1e2e] border border-[#0d1e2e]">
             {[
-              { label: 'Email', value: 'dimasiqball087@gmail.com', href: 'mailto:dimasiqball087@gmail.com' },
-              { label: 'GitHub', value: 'github.com/Rezpector888', href: 'https://github.com/Rezpector888' },
+              {
+                label: "Email",
+                value: "dimasiqball087@gmail.com",
+                href: "mailto:dimasiqball087@gmail.com",
+              },
+              {
+                label: "GitHub",
+                value: "github.com/Rezpector888",
+                href: "https://github.com/Rezpector888",
+              },
             ].map((c) => (
-              <div key={c.label} className="bg-[#070f17] hover:bg-[#0d1e2e] p-6 transition-colors">
+              <div
+                key={c.label}
+                className="bg-[#070f17] hover:bg-[#0d1e2e] p-6 transition-colors"
+              >
                 <p className="font-mono text-[10px] tracking-[3px] uppercase text-[#2d4a5e] mb-2">
                   {c.label}
                 </p>
                 <a
                   href={c.href}
-                  target={c.label === 'GitHub' ? '_blank' : undefined}
+                  target={c.label === "GitHub" ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   className="text-[13px] text-[#7EB8F7] hover:text-[#aad1ff] transition-colors"
                 >
@@ -205,8 +306,7 @@ export default function Home() {
             AVAILABLE FOR WORK
           </div>
         </footer>
-
       </div>
     </main>
-  )
+  );
 }
