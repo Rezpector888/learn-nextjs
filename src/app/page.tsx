@@ -9,6 +9,8 @@ const skills = [
   { num: "06", name: "Redis", sub: "Caching & pub/sub" },
   { num: "07", name: "gRPC", sub: "Service communication" },
   { num: "08", name: "CI/CD", sub: "Automated pipelines" },
+  { num: "09", name: "Flutter", sub: "Mobile service" },
+
 ];
 
 const projects = [
@@ -34,7 +36,7 @@ const projects = [
 
 const experiences = [
   {
-    title: "Backend Developer",
+    title: "Fullstack Developer",
     company: "PT Altimeda Cipta Visitama",
     date: "Feb 2025 – Present",
     description: "Working with NestJS, Golang, PostgreSQL, MSSQL, Redis.",
@@ -102,7 +104,7 @@ export default function Home() {
         {/* ── HERO ── */}
         <section className="mb-32">
           <p className="text-[10px] tracking-[5px] text-[#4a7aa0] uppercase mb-6">
-            Backend Engineer
+            Fullstack Engineer
           </p>
 
           <h1 className="text-4xl md:text-5xl font-bold text-[#edf4ff] leading-[1.15] tracking-tight mb-6">
@@ -117,7 +119,7 @@ export default function Home() {
           </p>
 
           <p className="text-[10px] tracking-[3px] text-[#2a3d4d] uppercase mb-10">
-            NestJS · Golang · PostgreSQL · Cloud
+            NestJS · Golang · PostgreSQL · Cloud · NextJS
           </p>
 
           <div className="flex gap-3">
