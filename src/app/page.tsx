@@ -95,6 +95,13 @@ const projects = [
     tags: ["NestJS", "Postgresql", "Mssql", "Redis", "Azure"],
     image: "/adenco.png",
   },
+  {
+    num: "11",
+    title: "Keroemah",
+    desc: "Sistem manajemen internal dan kostumer",
+    tags: ["NestJS", "Postgresql"],
+    image: "/keroemah.png"
+  }
 ];
 
 const experiences = [
