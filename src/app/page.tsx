@@ -1,36 +1,99 @@
-import { CardExperience, TypeWriterText } from "@belajar/components";
+import Image from "next/image";
+import { TypeWriterText } from "@belajar/components";
 
-const skills = [
-  { num: "01", name: "NestJS", sub: "Node.js framework" },
-  { num: "02", name: "Golang", sub: "High-performance services" },
-  { num: "03", name: "PostgreSQL", sub: "Relational databases" },
-  { num: "04", name: "Docker / K8s", sub: "Container orchestration" },
-  { num: "05", name: "Cloud & APIs", sub: "Design & deployment" },
-  { num: "06", name: "Redis", sub: "Caching & pub/sub" },
-  { num: "07", name: "gRPC", sub: "Service communication" },
-  { num: "08", name: "CI/CD", sub: "Automated pipelines" },
-  { num: "09", name: "Flutter", sub: "Mobile service" },
-
+const skillGroups = [
+  {
+    category: "Backend",
+    items: ["NestJS", "Gin", "Actix Web", "Springboot", "Quarkus", "FastAPI", "ExpressJS", "Laravel", "CodeIgniter"],
+  },
+  {
+    category: "Database",
+    items: ["PostgreSQL", "MongoDB", "MSSQL", "Redis"],
+  },
+  {
+    category: "Infrastructure",
+    items: ["Docker", "Kubernetes", "CI/CD", "AWS S3", "Minio", "Azure"],
+  },
+  {
+    category: "Frontend & Mobile",
+    items: ["Next.js", "Flutter"],
+  },
+  {
+    category: "Protocols",
+    items: ["REST", "gRPC", "WebSocket", "Socket.io"],
+  },
 ];
 
 const projects = [
   {
     num: "01",
-    title: "Real-time Backend System",
-    desc: "High-performance backend with real-time event processing and sub-millisecond response times under heavy load.",
-    tags: ["NestJS", "Redis", "WebSocket"],
+    title: "SIP-AJA",
+    desc: "Sistem Informasi Perlengkapan Jalan — platform manajemen inventaris infrastruktur jalan untuk Kementerian Perhubungan, mencakup tracking aset dan pelaporan real-time.",
+    tags: ["NestJS", "Redis", "PostgreSQL"],
+    image: "/sip-aja.png",
   },
   {
     num: "02",
-    title: "Microservices Platform",
-    desc: "Distributed microservices architecture on Kubernetes with automated CI/CD pipelines and zero-downtime deploys.",
-    tags: ["Golang", "Kubernetes", "gRPC"],
+    title: "Virtual Cubicle",
+    desc: "Platform ruang kerja virtual untuk kolaborasi tim secara remote, dilengkapi manajemen meeting, presensi digital, dan integrasi kalender.",
+    tags: ["Springboot", "PostgreSQL"],
+    image: "/virtual-cubicle.png",
   },
   {
     num: "03",
-    title: "REST API Gateway",
-    desc: "Centralized API gateway with auth, rate limiting, and request routing for multi-tenant applications.",
-    tags: ["NestJS", "PostgreSQL", "Docker"],
+    title: "E-Raport Kesehatan Banjarnegara",
+    desc: "Sistem raport kesehatan digital untuk Kabupaten Banjarnegara — mengelola data pasien, rekam medis, dan laporan kesehatan berbasis puskesmas dengan penyimpanan file terpusat.",
+    tags: ["NestJS", "MongoDB", "Minio"],
+    image: "/e-raport-kesehatan.png",
+  },
+  {
+    num: "04",
+    title: "E-Puskesmas Sergai",
+    desc: "Sistem informasi puskesmas terintegrasi dengan platform Satu Sehat BPJS. Mencakup rekam medis elektronik, antrian pasien, billing, dan sinkronisasi data nasional.",
+    tags: ["NestJS", "PostgreSQL", "Satu Sehat", "Redis", "Minio", "Next.js"],
+    image: "/e-puskesmas-sergai.png",
+  },
+  {
+    num: "05",
+    title: "Kopkar Toyota",
+    desc: "Platform koperasi karyawan Toyota berbasis web — mengelola simpan pinjam, transaksi, notifikasi real-time, dan penyimpanan dokumen dengan infrastruktur Docker Swarm.",
+    tags: ["Docker Swarm", "AWS S3", "Redis", "Socket.io", "Laravel", "Next.js"],
+    image: "/kopkar-toyota.png",
+  },
+  {
+    num: "06",
+    title: "PUD Toyota",
+    desc: "Sistem manajemen distribusi kendaraan internal Toyota — tracking pengiriman unit, dokumen serah terima, dan laporan distribusi dealer secara terpusat.",
+    tags: ["NestJS", "PostgreSQL", "Minio", "Redis", "Next.js"],
+    image: "/pud-toyota.png",
+  },
+  {
+    num: "07",
+    title: "OEE Astra Visteon Indonesia",
+    desc: "Dashboard Overall Equipment Effectiveness (OEE) untuk monitoring efisiensi mesin di lini produksi Astra Visteon. Deployment on-premise di Windows Server.",
+    tags: ["Windows Server", "Laravel", "Next.js", "MSSQL"],
+    image: "/oee-astra.png",
+  },
+  {
+    num: "08",
+    title: "Blync PGN Com",
+    desc: "Aplikasi komunikasi internal untuk PGN Communication — manajemen broadcast, direktori karyawan, dan integrasi notifikasi multi-channel.",
+    tags: ["Gin", "PostgreSQL", "Next.js"],
+    image: "/pgncom.png",
+  },
+  {
+    num: "09",
+    title: "Check Clip",
+    desc: "Platform quality control berbasis web untuk pengecekan komponen clip di lini manufaktur — dilengkapi image upload, validasi otomatis, dan laporan inspeksi.",
+    tags: ["Actix Web", "PostgreSQL", "Next.js"],
+    image: "/checkclip.png",
+  },
+    {
+    num: "10",
+    title: "Adenco Rostering",
+    desc: "",
+    tags: ["NestJS", "Postgresql", "Mssql", "Redis", "Azure"],
+    image: "/adenco.png",
   },
 ];
 
@@ -68,15 +131,23 @@ const experiences = [
 ];
 
 const links = [
-  { label: "Email", value: "dimasiqball087@gmail.com", href: "mailto:dimasiqball087@gmail.com" },
-  { label: "GitHub", value: "github.com/Rezpector888", href: "https://github.com/Rezpector888", external: true },
+  {
+    label: "Email",
+    value: "dimasiqball087@gmail.com",
+    href: "mailto:dimasiqball087@gmail.com",
+  },
+  {
+    label: "GitHub",
+    value: "github.com/Rezpector888",
+    href: "https://github.com/Rezpector888",
+    external: true,
+  },
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen  text-[#c8d8e8] font-mono antialiased relative overflow-x-hidden">
       <div className="max-w-3xl mx-auto px-6 py-20 md:py-28">
-
         {/* ── NAV ── */}
         <nav className="flex justify-between items-center mb-28">
           <span className="text-[11px] tracking-[4px] text-[#4a7aa0] uppercase">
@@ -118,7 +189,7 @@ export default function Home() {
             requirements into clean, resilient services.
           </p>
 
-          <p className="text-[10px] tracking-[3px] text-[#2a3d4d] uppercase mb-10">
+          <p className="text-[10px] tracking-[3px] text-[#0c71be] uppercase mb-10">
             NestJS · Golang · PostgreSQL · Cloud · NextJS
           </p>
 
@@ -144,16 +215,22 @@ export default function Home() {
         <section className="mb-28" id="about">
           <SectionLabel>Core Stack</SectionLabel>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#0e1c28]">
-            {skills.map((s) => (
-              <div
-                key={s.num}
-                className="group bg-[#080c10] hover:bg-[#0e1c28] p-5 transition-colors duration-200 relative"
-              >
-                <span className="absolute top-0 left-0 w-full h-px bg-[#7eb8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <p className="text-[9px] text-[#1d3550] tracking-[2px] mb-2">{s.num}</p>
-                <p className="text-[13px] text-[#c8d8e8] font-medium">{s.name}</p>
-                <p className="text-[11px] text-[#2a3d4d] mt-1">{s.sub}</p>
+          <div className="flex flex-col gap-px bg-[#0e1c28]">
+            {skillGroups.map((group) => (
+              <div key={group.category} className="bg-[#080c10] p-5 flex gap-6 items-start">
+                <span className="text-[9px] tracking-[3px] uppercase text-[#0c71be] w-24 shrink-0 pt-0.5">
+                  {group.category}
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-[11px] text-[#4a7aa0] border border-[#0e1c28] hover:border-[#2d4a60] hover:text-[#7eb8f7] px-3 py-1.5 transition-colors duration-200 cursor-default"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -173,13 +250,15 @@ export default function Home() {
                   {/* dot */}
                   <span className="absolute -left-8 top-1.5 w-2 h-2 rounded-full bg-[#7eb8f7] shadow-[0_0_8px_#7eb8f7]" />
 
-                  <p className="text-[9px] tracking-[2px] text-[#2a3d4d] uppercase mb-1">
+                  <p className="text-[9px] tracking-[2px] text-[#0c71be] uppercase mb-1">
                     {item.date}
                   </p>
                   <p className="text-[13px] text-[#edf4ff] font-semibold">
                     {item.title}
                   </p>
-                  <p className="text-[12px] text-[#4a7aa0] mb-2">{item.company}</p>
+                  <p className="text-[12px] text-[#4a7aa0] mb-2">
+                    {item.company}
+                  </p>
                   <p className="text-[12px] text-[#2d4a60] leading-relaxed">
                     {item.description}
                   </p>
@@ -193,31 +272,48 @@ export default function Home() {
         <section className="mb-28" id="work">
           <SectionLabel>Selected Work</SectionLabel>
 
-          <div className="flex flex-col gap-px bg-[#0e1c28]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#0e1c28]">
             {projects.map((p) => (
               <div
-                key={p.num}
-                className="group bg-[#080c10] hover:bg-[#0b1520] p-7 transition-colors duration-200 relative overflow-hidden"
+                key={`${p.num}-${p.title}`}
+                className="group bg-[#080c10] hover:bg-[#0b1520] transition-colors duration-200 relative overflow-hidden flex flex-col"
               >
-                <span className="absolute top-0 left-0 h-px w-0 group-hover:w-full bg-[#7eb8f7] transition-all duration-500" />
-                <p className="text-[9px] text-[#1d3550] tracking-[2px] mb-4">
-                  {p.num}
-                </p>
-                <h3 className="text-[14px] font-bold text-[#edf4ff] mb-2">
-                  {p.title}
-                </h3>
-                <p className="text-[12px] text-[#3d586e] leading-relaxed mb-5">
-                  {p.desc}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {p.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[9px] tracking-[1px] uppercase text-[#4a7aa0] border border-[#0e1c28] px-2 py-1 group-hover:border-[#1d3550] transition-colors"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {/* top accent line */}
+                <span className="absolute top-0 left-0 h-px w-0 group-hover:w-full bg-[#7eb8f7] transition-all duration-500 z-10" />
+
+                {/* image */}
+                <div className="relative w-full aspect-video overflow-hidden bg-[#0e1c28]">
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-[1.03] transition-all duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  {/* number overlay */}
+                  <span className="absolute top-3 left-3 text-[9px] tracking-[3px] text-[#7eb8f7]/50 font-mono">
+                    {p.num}
+                  </span>
+                </div>
+
+                {/* content */}
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-[13px] font-bold text-[#edf4ff] mb-2">
+                    {p.title}
+                  </h3>
+                  <p className="text-[11px] text-[#3d586e] leading-relaxed mb-4 flex-1">
+                    {p.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[9px] tracking-[1px] uppercase text-[#2d4a60] border border-[#0e1c28] group-hover:border-[#182d3d] group-hover:text-[#4a7aa0] px-2 py-1 transition-colors duration-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -230,8 +326,11 @@ export default function Home() {
 
           <div className="flex flex-col gap-px bg-[#0e1c28]">
             {links.map((c) => (
-              <div key={c.label} className="bg-[#080c10] hover:bg-[#0b1520] p-6 transition-colors duration-200 flex justify-between items-center">
-                <p className="text-[9px] tracking-[3px] uppercase text-[#2a3d4d]">
+              <div
+                key={c.label}
+                className="bg-[#080c10] hover:bg-[#0b1520] p-6 transition-colors duration-200 flex justify-between items-center"
+              >
+                <p className="text-[9px] tracking-[3px] uppercase text-[#0c71be]">
                   {c.label}
                 </p>
                 <a
@@ -249,15 +348,14 @@ export default function Home() {
 
         {/* ── FOOTER ── */}
         <footer className="flex justify-between items-center border-t border-[#0e1c28] pt-6">
-          <span className="text-[9px] tracking-[2px] text-[#1d3550]">
+          <span className="text-[9px] tracking-[2px] text-[#0c71be]">
             © {new Date().getFullYear()} DIMAS IQBAL NUGRAHA
           </span>
-          <div className="flex items-center gap-2 text-[9px] tracking-[2px] text-[#2a3d4d]">
+          <div className="flex items-center gap-2 text-[9px] tracking-[2px] text-[#0c71be]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#3fc97e] animate-pulse" />
             AVAILABLE FOR WORK
           </div>
         </footer>
-
       </div>
     </main>
   );
